@@ -1,6 +1,6 @@
 import NavBar  from '../../components/navbar';
 
-export default function Aluno() {
+export default function cadastroVisitante() {
   return (
     <NavBar/>
   )
