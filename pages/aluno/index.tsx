@@ -1,6 +1,6 @@
-import NavBar  from '../../components/navbar';
+import NavBar  from '../../components/NavBarAdmin';
 
-export default function Aluno() {
+export default function cadastroServidor() {
   return (
     <NavBar/>
   )

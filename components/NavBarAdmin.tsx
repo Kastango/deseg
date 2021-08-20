@@ -7,10 +7,10 @@ export default function NavBar() {
 
   return (
     <Flex direction="column">
-      <Flex m={2} mx={8} > 
-        <Button onClick={() => router.back()}><ChevronLeftIcon w={8} h={8}  color="gray.600"/></Button>
+      <Flex m={2} mx={[1, 2, 20]} > 
+        <Button onClick={() => router.back()}><ChevronLeftIcon w={6} h={6}  color="gray.600"/></Button>
         <Menu>
-          <MenuButton marginLeft={2} as={Button} rightIcon={<ChevronDownIcon />}>
+          <MenuButton marginLeft={[1, 2]} as={Button} rightIcon={<ChevronDownIcon />}>
             Cadastro
           </MenuButton>
           <MenuList>
@@ -23,8 +23,8 @@ export default function NavBar() {
         </Menu>
         <Spacer />
         <Flex alignItems="center" justifyContent="center">
-          <Button><BellIcon w={8} h={8}  color="gray.600"/></Button>
-          <Button marginLeft={2}>Meu Perfil</Button>
+          <Button onClick={() => router.push(router.pathname + '/profile')} >Meu Perfil</Button>
+          <Button marginLeft={[1, 2]}><BellIcon w={6} h={6}  color="gray.600"/></Button>
         </Flex>
       </Flex>
       <Divider orientation="horizontal" />
