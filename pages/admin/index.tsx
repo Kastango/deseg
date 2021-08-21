@@ -14,11 +14,14 @@ import { Button,
   Thead, 
   Th, 
   Tbody, 
-  Td 
+  Td,
+  Box
 } from '@chakra-ui/react';
 import { useState } from 'react';
 
 import NavBarAdmin  from '../../components/NavBarAdmin';
+import Image from 'next/image';
+import campi from '../../public/campi.jpg'
 
 
 export default function Admin() {
@@ -62,7 +65,12 @@ export default function Admin() {
           <Text ml={4}>Observação</Text>
           <Textarea placeholder="Adicione aqui um texto com uma observação sobre o ocorrido" />
         </Stack>
-        <Button colorScheme="teal">Cadastrar Ocorrencia</Button>
+        <Box>
+        <map name="workmap">
+          <area shape="rect" coords="44,84, 1070,300" alt="Computer" href="/cad"/>
+        </map>
+          <Image src={campi} layout="responsive" placeholder="blur" useMap="#workmap" alt="Imagem aerea do campus dois vizinhos"/>
+        </Box>
       </Stack>
     </Flex>
     <Flex>

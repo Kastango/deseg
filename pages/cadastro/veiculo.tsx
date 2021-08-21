@@ -1,6 +1,6 @@
 import { Button, Flex, Heading, Input, InputGroup, InputLeftAddon, Stack, Table, TableCaption, Tr, Thead, Th, Tbody, Td, Spacer } from '@chakra-ui/react'
 
-import NavBar  from '../../components/navbar';
+import NavBar  from '../../components/NavBarAdmin';
 
 export default function cadastroVeiculo() {
   return (
