@@ -32,7 +32,7 @@ export default function Admin() {
 
   return (
     <>
-    <NavBar elements={[1,1,1,1]}/>
+    <NavBar elements={[1,1,0,1]}/>
     <Flex>
       <Stack spacing={4} direction="column" mx={[1, 2, 20]} mt={8} w='full'  background="gray.100" p={12} rounded={6} >
         <Heading mb={4}>Cadastro de Ocorrência</Heading>
@@ -78,7 +78,7 @@ export default function Admin() {
         </Stack>
       </Stack>
     </Flex>
-    <Flex>
+    <Flex overflowX="auto">
     { showResults ? 
       <Table variant="striped" mx={[1, 2, 20]} mt={8} colorScheme="gray">
       <TableCaption>Veículos Consultado</TableCaption>
