@@ -78,7 +78,7 @@ export default function Servidor() {
                 </Stack>
               </Td>
               <Td isNumeric>
-                <Text fontWeight="bold" color="grey.600">Aguardando Análise</Text>
+                <Text fontWeight="bold" color="gray.500">Aguardando Análise</Text>
               </Td>
             </Tr>
             <Tr>
