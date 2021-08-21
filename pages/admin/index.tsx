@@ -19,7 +19,7 @@ import { Button,
 } from '@chakra-ui/react';
 import { useState } from 'react';
 
-import NavBarAdmin  from '../../components/NavBarAdmin';
+import NavBar  from '../../components/NavBar';
 import Image from 'next/image';
 import campi from '../../public/campi.jpg'
 
@@ -28,9 +28,11 @@ export default function Admin() {
   const [showResults, setShowResults] = useState(false)
   const onClick = () => setShowResults(true)
 
+  const [placa, setPlaca] = useState('')
+
   return (
     <>
-    <NavBarAdmin/>
+    <NavBar elements={[1,1,1,1]}/>
     <Flex>
       <Stack spacing={4} direction="column" mx={[1, 2, 20]} mt={8} w='full'  background="gray.100" p={12} rounded={6} >
         <Heading mb={4}>Cadastro de Ocorrência</Heading>
@@ -41,7 +43,7 @@ export default function Admin() {
           </InputGroup>
           <InputGroup variant="outline" colorScheme="teal">
             <InputLeftAddon>Placa</InputLeftAddon>
-            <Input type="string" placeholder="BRA2E21" />
+            <Input type="string" placeholder="BRA2E21" onChange={event => setPlaca(event.target.value)} />
             <InputRightElement variant="filled" width="10rem">
               <Button colorScheme="teal" h="1.75rem" size="sm" onClick={onClick}>Consultar placa</Button>
             </InputRightElement>
@@ -65,12 +67,15 @@ export default function Admin() {
           <Text ml={4}>Observação</Text>
           <Textarea placeholder="Adicione aqui um texto com uma observação sobre o ocorrido" />
         </Stack>
-        <Box>
-        <map name="workmap">
-          <area shape="rect" coords="44,84, 1070,300" alt="Computer" href="/cad"/>
-        </map>
-          <Image src={campi} layout="responsive" placeholder="blur" useMap="#workmap" alt="Imagem aerea do campus dois vizinhos"/>
-        </Box>
+        <Stack direction="column" alignSelf="center">
+          <Box width={360} borderRadius={10} overflow="hidden">
+            <map name="workmap">
+              <area shape="rect" coords="44,84, 1070,300" alt="Computer" href="/admin/ocorrencia-registrada"/>
+            </map>
+            <Image src={campi} layout="responsive" placeholder="blur" useMap="#workmap" alt="Imagem aerea do campus dois vizinhos"/>
+          </Box>
+          <Text textAlign="center" color="gray.500" fontSize="sm">Clique no estacionamento para cadastrar a ocorrência.</Text>
+        </Stack>
       </Stack>
     </Flex>
     <Flex>
@@ -89,7 +94,7 @@ export default function Admin() {
       </Thead>
       <Tbody>
         <Tr>
-          <Td>BRA2B19</Td>
+          <Td>{placa}</Td>
           <Td>Tobias Junior</Td>
           <Td>Visitante</Td>
           <Td>Gol 2021</Td>

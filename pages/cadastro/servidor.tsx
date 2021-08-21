@@ -1,7 +1,7 @@
-import NavBar  from '../../components/NavBarAdmin';
+import NavBar  from '../../components/NavBar';
 
 export default function cadastroServidor() {
   return (
-    <NavBar/>
+    <NavBar elements={[1,1,0,0]}/>
   )
 }

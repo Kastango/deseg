@@ -1,7 +1,7 @@
-import NavBar  from '../../components/navbar';
+import NavBar  from '../../components/NavBar';
 
 export default function cadastroVisitante() {
   return (
-    <NavBar/>
+    <NavBar elements={[1,1,0,0]}/>
   )
 }

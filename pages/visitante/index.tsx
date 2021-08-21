@@ -1,6 +1,10 @@
+import NavBar  from '../../components/NavBar';
 
-export default function Aluno() {
+export default function Visitante() {
   return (
-    <h1>visitante</h1>
+    <>
+      <NavBar elements={[1,0,1,1]}/>
+      <h1>Visitante</h1>
+    </>
   )
 }

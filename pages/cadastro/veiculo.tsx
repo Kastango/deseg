@@ -1,11 +1,12 @@
 import { Button, Flex, Heading, Input, InputGroup, InputLeftAddon, Stack, Table, TableCaption, Tr, Thead, Th, Tbody, Td, Spacer } from '@chakra-ui/react'
+import { CloseIcon } from '@chakra-ui/icons'
 
-import NavBar  from '../../components/NavBarAdmin';
+import NavBar  from '../../components/NavBar';
 
 export default function cadastroVeiculo() {
   return (
     <>
-    <NavBar/>
+    <NavBar elements={[1,1,0,0]}/>
     <Flex>
       <Stack spacing={4} direction="column" mx={[1, 2, 20]} mt={8} w='full'  background="gray.100" p={12} rounded={6} >
         <Heading mb={4}>Cadastro de Veículos</Heading>
@@ -51,6 +52,7 @@ export default function cadastroVeiculo() {
               <Th>Fabricante</Th>
               <Th>Placa</Th>
               <Th>Cor</Th>
+              <Th isNumeric>Excluir</Th>
             </Tr>
           </Thead>
           <Tbody>
@@ -61,6 +63,7 @@ export default function cadastroVeiculo() {
               <Td>Volkswagen</Td>
               <Td>BRA2B19</Td>
               <Td>Branco</Td>
+              <Td isNumeric><CloseIcon color="red.700" cursor="pointer"/></Td>
             </Tr>
             <Tr>
               <Td>2</Td>
@@ -69,6 +72,7 @@ export default function cadastroVeiculo() {
               <Td>Fiat</Td>
               <Td>AWD1198</Td>
               <Td>Branco</Td>
+              <Td isNumeric><CloseIcon color="red.700" cursor="pointer"/></Td>
             </Tr>
             <Tr>
               <Td>3</Td>
@@ -77,6 +81,7 @@ export default function cadastroVeiculo() {
               <Td>Honda</Td>
               <Td>AZD1098</Td>
               <Td>Vermelho</Td>
+              <Td isNumeric><CloseIcon color="red.700" cursor="pointer"/></Td>
             </Tr>
           </Tbody>
         </Table>

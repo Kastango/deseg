@@ -1,7 +1,10 @@
-import NavBar  from '../../components/NavBarAdmin';
+import NavBar  from '../../components/NavBar';
 
-export default function cadastroServidor() {
+export default function Aluno() {
   return (
-    <NavBar/>
+    <>
+      <NavBar elements={[1,0,1,1]}/>
+      <h1>Aluno</h1>
+    </>
   )
 }
