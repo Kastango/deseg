@@ -41,7 +41,7 @@ export default function cadastroVeiculo() {
         </Flex>
       </Stack>
     </Flex>
-    <Flex overflowX="auto">
+    <Flex>
       <Table variant="striped" mx={[1, 2, 20]} mt={8} colorScheme="gray">
           <TableCaption>Veículos Cadastrados</TableCaption>
           <Thead>
