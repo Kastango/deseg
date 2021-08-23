@@ -1,10 +1,11 @@
-import NavBar  from '../../components/NavBar';
+import NavBar from '../../components/NavBar';
+import Notifications from '../../components/notifications'
 
-export default function Visitante() {
+export default function Servidor() {
   return (
     <>
-      <NavBar elements={[1,0,1,1]}/>
-      <h1>Visitante</h1>
+      <NavBar elements={[1, 0, 1, 0]} />
+      <Notifications />
     </>
   )
 }
