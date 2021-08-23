@@ -36,7 +36,11 @@ export default function NavBar(props) {
             <Button onClick={() => router.push(router.pathname + '/profile')} >Meu Perfil</Button>
             : null}
           {props.elements[3] ?
-            <Button marginLeft={[1, 2]}><BellIcon w={6} h={6} color="gray.600" /></Button>
+            <Button 
+              onClick={() => router.push(router.pathname + '/contest')} 
+              marginLeft={[1, 2]}>
+                <BellIcon w={6} h={6} color="gray.600" />
+            </Button>
             : null}
         </Flex>
       </Flex>
