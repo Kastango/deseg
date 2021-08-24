@@ -1,25 +1,47 @@
-import { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 import NavBar from '../../components/NavBar';
-import { Button, Flex, Heading, Stack, Table, Text, Tr, Thead, Th, Tbody, Td, Box, Alert, AlertIcon, ScaleFade, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogBody, AlertDialogFooter} from '@chakra-ui/react'
+import { Button, Flex, Heading, Stack, Table, Text, Tr, Thead, Th, Tbody, Td, Box, Alert, AlertIcon, ScaleFade, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogBody, AlertDialogFooter, AlertTitle, AlertDescription, useUnmountEffect} from '@chakra-ui/react'
 
 import veiculo1 from '../../public/foto-1.jpg'
 import Image from 'next/image';
 
 export default function Contest() {
-  const [showAproveAlert, setShowAproveAlert] = useState(false);
-  
-  const [showRecuseAlert, setShowRecuseAlert] = useState(false)
-  const onClose = () => setShowRecuseAlert(false)
+  const [isOpen, setIsOpen] = useState(false)
+  const onClose = () => setIsOpen(false)
   const cancelRef = useRef()
+
+
+  const [alert, setAlert] = useState(false);
+
+  useEffect(() => {
+    // when the component is mounted, the alert is displayed for 5 seconds
+    const timer = setTimeout(() => {
+      setAlert(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []); 
 
   return (
     <>
       <NavBar elements={[1, 0, 0, 0]} />
+
+      {
+      alert ?
+       <Alert  pl={20} status="success">
+        <AlertIcon/>
+        Ocorrência aprovada
+      </Alert>
+      : null
+      }
+
+
       <AlertDialog
-        isOpen={showRecuseAlert}
+        isOpen={isOpen}
         leastDestructiveRef={cancelRef}
         onClose={onClose}
+        isCentered
       >
         <AlertDialogOverlay>
           <AlertDialogContent>
@@ -76,8 +98,8 @@ export default function Contest() {
                       </Td>
                       <Td isNumeric>
                         <Stack direction="row">
-                          <Button colorScheme="teal" onClick={() => setShowAproveAlert(true)} variant="solid" backgroundColor="green.500">Aprovar</Button>
-                          <Button colorScheme="teal" onClick={() => setShowRecuseAlert(true)} variant="solid" backgroundColor="red.500">Recusar</Button>
+                          <Button colorScheme="teal" onClick={() => setAlert(true)} variant="solid" backgroundColor="green.500">Aprovar</Button>
+                          <Button colorScheme="teal" onClick={() => setIsOpen(true)} variant="solid" backgroundColor="red.500">Recusar</Button>
                         </Stack>
                       </Td>
                   </Tr>
