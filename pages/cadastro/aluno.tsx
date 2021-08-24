@@ -30,7 +30,7 @@ const mock = [{
   id: 2,
   nome: "Arthur Sosnowski",
   curso: "Engenharia de Software",
-  ra: "2152870",
+  ra: "2152878",
   telefone: "(46) 99999-0000",
   email: "metroidling@gmail.com"
 }]
@@ -40,7 +40,7 @@ export default function cadastroEstacionamento() {
   return (
     <>
       <NavBar elements={[1, 0, 0, 0]} />
-      <Cadastro titles={titles} mock={mock} property="Alunos" />
+      <Cadastro key={titles} titles={titles} mock={mock} property="Alunos" />
     </>
   )
 }

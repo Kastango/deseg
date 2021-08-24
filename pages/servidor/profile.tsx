@@ -39,7 +39,7 @@ export default function Profile() {
     return (
         <>
             <NavBar elements={[1, 0, 0, 0]} />
-            <ProfileComponent titles={titles} mock={mock} />
+            <ProfileComponent key={titles} titles={titles} mock={mock} />
         </>
     )
 }
