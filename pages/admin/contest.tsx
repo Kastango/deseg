@@ -20,7 +20,7 @@ export default function Contest() {
       setAlert(false);
     }, 5000);
 
-    return () => clearTimeout(timer);
+    return () => {clearTimeout(timer)};
   }, []); 
 
   return (
