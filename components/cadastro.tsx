@@ -22,7 +22,7 @@ export default function Cadastro(props) {
                 <Stack spacing={4} direction="column" mx={[1, 2, 20]} mt={8} w='full' background="gray.100" p={12} rounded={6} >
                     <Heading mb={4}>Cadastro de {props.property}</Heading>
                     {props.titles.map(title => (
-                        <InputGroup variant="outline">
+                        <InputGroup key={title} variant="outline">
                             <InputLeftAddon>{title.title}</InputLeftAddon>
                             <Input type="string" />
                         </InputGroup>
@@ -45,16 +45,16 @@ export default function Cadastro(props) {
                         <Tr>
                             <Th>Id</Th>
                             {props.titles.map(title => (
-                                <Th>{title.title}</Th>
+                                <Th key={title}>{title.title}</Th>
                             ))}
                             <Th isNumeric>Excluir</Th>
                         </Tr>
                     </Thead>
                     <Tbody>
                         {props.mock.map(registro => (
-                            <Tr>
+                            <Tr key={registro}>
                                 {Object.values(registro).map(prop => (
-                                    <Td>{prop}</Td>
+                                    <Td key={registro}>{prop}</Td>
                                 ))}
                                 <Td isNumeric><CloseIcon color="red.700" cursor="pointer" /></Td>
                             </Tr>

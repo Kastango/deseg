@@ -52,7 +52,7 @@ export default function cadastroEstacionamento() {
   return (
     <>
       <NavBar elements={[1, 0, 0, 0]} />
-      <Cadastro key={titles} titles={titles} mock={mock} property="Servidores" />
+      <Cadastro titles={titles} mock={mock} property="Servidores" />
     </>
   )
 }
