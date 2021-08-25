@@ -3,7 +3,7 @@ import Cadastro from '../../components/cadastro';
 
 
 const titles = [
-  "Descrição"
+  "Descricao"
 ]
 
 const mock = [{
