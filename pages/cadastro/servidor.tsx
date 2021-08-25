@@ -15,7 +15,7 @@ const titles = ["Nome"
   ,
   "Cargo"
   ,
-  "Matrícula"
+  "Matricula"
   ,
   "Email"
 ]
