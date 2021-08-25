@@ -71,7 +71,7 @@ export default function Ocorrencia() {
                     <Stack direction="column" alignSelf="center">
                         <Box width={360} borderRadius={10} overflow="hidden">
                             <map name="workmap">
-                                <area shape="rect" coords="44,84, 1070,300" alt="Computer" href="/admin/ocorrencia-registrada" />
+                                <area shape="rect" coords="44,84, 1070,300" alt="Computer" href="/cadastro/ocorrencia-registrada" />
                             </map>
                             <Image src={campi} layout="responsive" placeholder="blur" useMap="#workmap" alt="Imagem aerea do campus dois vizinhos" />
                         </Box>
