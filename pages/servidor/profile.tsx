@@ -24,7 +24,6 @@ const titles = [{
 }]
 
 const mock = {
-    id: 1,
     nome: "Carlao",
     telefone: "(46) 99999-0000",
     ramal: "5001",

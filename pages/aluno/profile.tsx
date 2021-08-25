@@ -18,7 +18,6 @@ const titles = [{
 }]
 
 const mock = {
-  id: 1,
   nome: "Guilherme",
   curso: "Engenharia de Software",
   ra: "2152940",

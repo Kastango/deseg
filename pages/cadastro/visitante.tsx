@@ -2,18 +2,15 @@ import NavBar from '../../components/NavBar';
 import Cadastro from '../../components/cadastro';
 
 
-const titles = [{
-  title: "Nome"
-},
-{
-  title: "CPF"
-},
-{
-  title: "Telefone"
-},
-{
-  title: "Email"
-}]
+const titles = [
+  "Nome"
+  ,
+  "CPF"
+  ,
+  "Telefone"
+  ,
+  "Email"
+]
 
 const mock = [{
   id: 1,
